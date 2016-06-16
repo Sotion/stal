@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<link rel="stylesheet" href="css/styl.css">
+<link rel="stylesheet" href="css/sk.min.css">
+<link rel="stylesheet" href="css/css.css">
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+
+
+
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.functions.js"></script>
+	<script src="js/geolocation.js"></script>
+	<script src="js/form.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+	<script src="js/googlemap.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script src="js/sms.js"></script>
+	<script src="js/cordova.js"></script>
+	
+	  
+<title>Portofino Mobile App</title>
+
+</head>
+
+<body>
+
+
+
+	<!-- Strona Startowa - Portofino -->
+	<div id="Komanda X" data-role="page" data-title="Komanda X" >
+		<div data-role="header">
+		<h1> Portofino Mobile</h1>
+		</div>
+		<div data-role="content">
+			<div id="logo"><p align="center"><img src="1.jpg"></p></div>
+			
+			
+			
+			<div data-role="controlgroup">
+				<a href="#cyklop" data-role="button" data-transition="flip">O nas</a>
+				<a href="#rosomak" data-role="button" data-transition="flip">Menu</a>
+				<a href="#map-page" data-role="button" data-transition="flip">Lokalizacja</a>
+			<a href="#intro" data-role="button">Kontakt</a>
+			<a href="#aplikuj" data-role="button">Rezerwacje</a>
+			</div>
+		</div>
+	<div data-role="footer" data-position="fixed">
+		<p align="center"><b> Smacznego! </b></p>
+		<div data-role="content">
+			
+		</div>
+	</div>
+	</div>
+	</div>
+
+	<!-- O nas -->
+	<div id="cyklop" data-role="page" data-title="cyklop" >
+	<div data-role="header">
+	<h1> O NAS </h1>
+	<a href="#Komanda X" data-icon="home" data-iconpos="notext"></a>
+	</div>
+	<div data-role="content">
+	
+		
+	<p style=" text-align: justify;" > Jeśli szukasz prawdziwej włoskiej kuchni i chcesz przyjemnie spędzić czas w miłej atmosferze, odwiedź naszą restaurację i pizzerie Portofino.<br>
+	Kosztując przygotowane przez nas dania przeniesiesz się wprost do słonecznej Italii.  </p>
+<div id="lokal"><img src="elo.jpg"></div> 
+	</div>
+	<div data-role="footer" data-position="fixed">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#cyklop" data-icon="info">O nas</a></li>
+		<li><a href="#rosomak"data-icon="grid">Menu</a></li>
+		<li><a href="#map-page"data-icon="navigation">Lokalizacja</a></li>
+		<li><a href="#intro"data-icon="phone">Kontakt</a></li>
+		<li><a href="#aplikuj" data-icon="calendar">Rezerwacje</a></li>
+		</ul>
+	</div>
+	</div>
+	</div>
+
+<!-- Menu -->
+	<div id="rosomak" data-role="page" data-title="rosomak" >
+	<div data-role="header">
+	<h1> MENU </h1>
+	
+	
+	<a href="#Komanda X" data-icon="home" data-iconpos="notext"></a>
+	</div>
+	<div data-role="content">
+	<p align="center"><img src="menu2.jpg"></p>
+		<br> <a href="#przystawki" data-role="button" data-transition="flip">Przystawki</a>
+				<a href="#pizze" data-role="button" data-transition="flip">Pizza</a>
+				<a href="#mieso" data-role="button" data-transition="flip">Dania Główne</a>
+		<div id="skaner">
+			<p>
+				<div role="main" class="ui-content" style="text-align: center">
+						<button onclick="scanBarcode()" id="panel2" type="button" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Skanuj kod kreskowy</button>
+				</div>
+			</p>
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#cyklop" data-icon="info">O nas</a></li>
+		<li><a href="#rosomak"data-icon="grid">Menu</a></li>
+		<li><a href="#map-page"data-icon="navigation">Lokalizacja</a></li>
+		<li><a href="#intro"data-icon="phone">Kontakt</a></li>
+		<li><a href="#aplikuj" data-icon="calendar">Rezerwacje</a></li>
+		</ul>
+	</div>
+	</div>
+	</div>
+	<!-- Przystawki i Sałatki -->
+	<div id="przystawki" data-role="page" data-title="przystawki" >
+	
+	<div data-role="header">
+	<a href="#Komanda X" data-icon="home" data-iconpos="notext"></a>
+	<h1> Przystawki </h1>
+	</div>
+	<br>
+	<img src="przyst.jpg">
+	<div data-role="footer" data-position="fixed">
+	<p align="center"> Smacznego </p>
+	</div>
+	
+	</div>
+	<!-- Pizza -->
+	<div id="pizze" data-role="page" data-title="pizze" >
+	
+	<div data-role="header">
+	<a href="#Komanda X" data-icon="home" data-iconpos="notext"></a>
+	<h1> Pizza </h1>
+	</div>
+	<br>
+	<img src="pizza.jpg">
+	<div data-role="footer" data-position="fixed">
+	<p align="center"> Smacznego </p>
+	</div>
+	
+	</div>
+	<!-- Dania Główne -->
+	<div id="mieso" data-role="page" data-title="mieso" >
+	
+	<div data-role="header">
+	<a href="#Komanda X" data-icon="home" data-iconpos="notext"></a>
+	<h1> Dania Główne </h1>
+	</div>
+	<br>
+	<img src="zupyryby.jpg">
+	<div data-role="footer" data-position="fixed">
+	<p align="center"> Smacznego </p>
+	</div>
+	
+	
+	
+	</div>
+	<!-- LOKALIZACJA -->
+	<div data-role="page" id="map-page" data-url="map-page">
+    <div data-role="header" data-theme="a">
+    <h1>Maps</h1>
+	<a href="#Komanda X" data-icon="home" data-iconpos="notext"></a>
+    </div>
+    <div role="main" class="ui-content" id="map_canvas">
+        <!-- map loads here... -->
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#cyklop" data-icon="info">O nas</a></li>
+				<li><a href="#rosomak"data-icon="grid">Menu</a></li>
+				<li><a href="#map-page"data-icon="navigation">Lokalizacja</a></li>
+				<li><a href="#intro"data-icon="phone">Kontakt</a></li>
+				<li><a href="#aplikuj" data-icon="calendar">Rezerwacje</a></li>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+	<!-- Kontakt -->
+	<div id="intro" data-role="page" data-title="Intro" >
+	<div data-role="header">
+	<h1> KONTAKT </h1>
+	<a href="#Komanda X" data-icon="home" data-iconpos="notext"></a>
+	</div>
+	<div data-role="content">
+	<p align ="center"><b> Restauracja Portofino Kraków </b></p>
+	<p align ="left">Prądnik Biały<br>31-2 Kraków <br>Bociana 8a</p>
+	
+<p align="left"><b>Godziny otwarcia: </b><br>
+poniedziałek-środa: 10:00-24:00 <br>
+czwartek: 10:00-4:00<br>
+piątek-sobota: 10:00-5:00<br>
+niedziela: 10:00-2:00 <br></p>
+	<p align="left"> <b> Email: </b> portofino@gmail.com</p>
+	<p align="justify">Zapraszamy do odwiedzenia naszego lokalu w podanych powyżej godzinach oraz do zamawiania naszych wspaniałych dań i rozkoszowania się nimi w domowym zaciszu.</p>
+	<p align="center">W celu dokonania zamówienia proszę się skontaktować poprzez podany numer telefonu<br>Życzymy smacznego!</p>
+		<button onclick='window.location.href = "tel:+781822118"'>Zadzwoń</button>
+
+	</div>
+	<div data-role="footer" data-position="fixed">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#cyklop" data-icon="info">O nas</a></li>
+		<li><a href="#rosomak"data-icon="grid">Menu</a></li>
+		<li><a href="#map-page"data-icon="navigation">Lokalizacja</a></li>
+		<li><a href="#intro"data-icon="phone">Kontakt</a></li>
+		<li><a href="#aplikuj" data-icon="calendar">Rezerwacje</a></li>
+		</ul>
+	</div>
+	</div>
+	</div>
+
+	<!-- Rezerwacje -->
+	<!--------------first page for form----------->
+        <div id="aplikuj" data-role="page" data-title="aplikuj" >
+            <!--------------first page header----------->
+            <div data-role="header">
+					<h1> Rezerwacja </h1>
+					<a href="#Komanda X" data-icon="home" data-iconpos="notext"></a>
+            </div> 
+	    	<div data-role="content">
+            <div class="content-padded">
+                <form>
+                <input type="text" id="number" placeholder="Phone Number"><br/>
+                <textarea id="message" placeholder="Message"></textarea>
+                <input type="button" class="btn btn-positive btn-block" id="sendMessage" value="Send Message">
+                </form>
+            </div>
+            </div>
+			<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+			<ul>
+				<li><a href="#cyklop" data-icon="info">O nas</a></li>
+				<li><a href="#rosomak"data-icon="grid">Menu</a></li>
+				<li><a href="#map-page"data-icon="navigation">Lokalizacja</a></li>
+				<li><a href="#intro"data-icon="phone">Kontakt</a></li>
+				<li><a href="#aplikuj" data-icon="calendar">Rezerwacje</a></li>
+				</ul>
+			</div>
+			</div>
+		</div>
+
+        <!-------------------------------------------------------------
+
+		
+	
+<!--Geolokalizacja-->
+<div data-role="page" id="introsettings"  style="text-align: center">
+	<div data-role="header">
+	<h1> Twoja geolokalizacja:</h1>
+	<a href="#Komanda X" data-icon="home" data-iconpos="notext"></a>
+	</div>
+		<div data-role="main" class="ui-content top50">
+			<div id="geolocation"></div>
+		</div>
+
+</html>

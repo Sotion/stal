@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+		xmlns:gap = "http://phonegap.com/ns/1.0"
+		id= "testaplikacji"
+		versionCode = "1"
+		version = "1.0.0" >
+
+
+	<name>Portofino Mobile App</name>
+	<description>Przykaldowa aplikacja dedykowana dla restuarcji/pizerri Portofino</description>
+	<author>Jakub Doskocz, Dawid Konopka</author>
+	
+	<icon src="fork.png" />
+	<splash src="1.png" platform="android" qualifier="ldpi" />
+	
+		<gap:platform name="android" />
+		
+	<access origin="*" />
+	 <plugin name="cordova-plugin-whitelist" version="1" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+
+	<gap:plugin name="org.apache.cordova.dialogs" />
+	<gap:plugin name="cordova-plugin-device"/>
+	<gap:plugin name="com.phonegap.plugins.barcodescanner" spec="2.0.0" source="pgb" />
+	<gap:plugin name="cordova-plugin-file" spec="3.0.0" source="pgb" />
+	<gap:plugin name="org.apache.cordova.geolocation" spec="0.3.12" source="pgb" />
+	<plugin name="com.teamnemitoff.phonedialer" spec="0.3.0" source="pgb" />
+	<gap:plugin name="cordova-sms-plugin" source="npm" />
+	<gap:plugin name="cordova-plugin-dialogs" />
+	
+
+</widget>
+	
+	
